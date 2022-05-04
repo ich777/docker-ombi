@@ -8,7 +8,7 @@ RUN apt-get update && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV DATA_DIR="/ombi"
-ENV SONARR_REL="latest"
+ENV OMBI_RELEASE="latest"
 ENV START_PARAMS=""
 ENV UMASK=0000
 ENV DATA_PERM=770
