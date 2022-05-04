@@ -4,8 +4,8 @@ if [ "$OMBI_REL" == "latest" ]; then
 elif [ "$OMBI_REL" == "develop" ]; then
   LAT_V="$(wget -qO- https://api.github.com/repos/Ombi-app/Ombi/releases | jq -r 'map(select(.prerelease)) | first | .tag_name' | sed 's/v//g')"
 else
-  echo "---Version manually set to: v$OMBI_REL---"
-  LAT_V="$OMBI_REL"
+  echo "---Please set the version to "latest" or "develop"---"
+  sleep infinity
 fi
 
 CUR_V="$(find ${DATA_DIR} -name "ombiinstalledv-*" | cut -d '-' -f2)"
