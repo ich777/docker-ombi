@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors="admin@minenet.at"
 LABEL org.opencontainers.image.source="https://github.com/ich777/docker-ombi"
 
 RUN apt-get update && \
-	apt-get -y install --no-install-recommends jq libicu67 && \
+	apt-get -y install --no-install-recommends jq libicu72 && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV DATA_DIR="/ombi"
